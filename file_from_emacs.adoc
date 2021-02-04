@@ -1,0 +1,2 @@
+Try a new adoc file
+_is this in adoc italics?_
