@@ -1,2 +1,22 @@
-Try a new adoc file
+Introduction
+------------
+This is a new asciidoc document trial.
+
 _is this in adoc italics?_
+
+Examples
+========
+This header used =
+- I need more adoc options to test
+  what does this do with a list
+
+- another example 
+
+[[X7]]
+More Examples
+~~~~~~~~~~~~~
+This header used ~.  What does it look like.  It also has a preceding X7.
+
+Back to another header
+----------------------
+This header uses a single -
