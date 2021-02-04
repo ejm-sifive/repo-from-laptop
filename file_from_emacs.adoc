@@ -1,3 +1,25 @@
+Power Dial (formerly DDPM)
+==========================
+
+Purpose
+-------
+The Power Dial feature provides a method of scaling down power use in a core without the need for voltage and frequency changes.
+
+Method
+------
+The following 4b Register defines a series of reduced performance modes to scale power below the normal peak.
+
+How do I format a table?
++---+------------------+
+| 0 | feature disabled |
++---+------------------+
+| 1 | 1/15th    6.7%   |
++---+------------------+
+| 15| 14/15th  93.3%   |
++---+------------------+
+
+
+
 Introduction
 ------------
 This is a new asciidoc document trial.
