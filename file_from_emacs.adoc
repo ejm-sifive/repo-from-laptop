@@ -1,0 +1,62 @@
+Power Dial (formerly DDPM)
+==========================
+
+Generators
+----------
+Caboose : unimplemented
+Rocket  : unimplemented
+Bullet  : implemented
+Mallard : implemented
+
+Purpose
+-------
+The Power Dial feature provides a method of scaling down power use in a core without the need for voltage and frequency changes.
+
+Method
+------
+The following 4b Register defines a series of reduced performance modes to scale power below the normal peak.
+
+Addr : 0x7c8
+Name : PowerDial
+Reset: 0x0 
+
+ MSB:4 RAWL ? 
+ 3:0  Instruction Issue Rate (% of peak)
++---+------------------+
+| 0 | disabled  100%   |
++---+------------------+
+| 1 | 1/15th    93.3%  |
++---+------------------+
+| 15| 14/15th    6.7%  |
++---+------------------+
+
+Description:
+------------
+When written to a non-zero value, the register causes instruction issue rates per-256-cycle periods to scale in the percentages shown to reduce relative power use.  Power is a function of many variables including voltage, frequency, pipeline execution and data, therefore the PowerDial register is only one element of a power management solution.
+
+
+
+
+
+Introduction
+------------
+This is a new asciidoc document trial.
+
+_is this in adoc italics?_
+
+Examples
+========
+This header used =
+- I need more adoc options to test
+  what does this do with a list
+
+- another example 
+
+[[X7]]
+More Examples
+~~~~~~~~~~~~~
+This header used ~.  What does it look like.  It also has a preceding X7.
+
+Back to another header
+----------------------
+This header uses a single -
